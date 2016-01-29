@@ -1,0 +1,50 @@
+<div id="switch">
+      <div class="content-switcher">
+          <p class="brand-text">Share This:</p>
+
+		  <div class="menu-select" title="Share this on weibo">
+		  		<a class="waves-effect waves-light btn" href="service.weibo.com/share/share.php?title=·ÖÏíheyiping.cnÍøÕ¾&url={{ request.build_absolute_uri/urlencode }}">
+                  <i class="fa fa-weibo left"></i>Weibo</a>
+          </div>
+          
+          <!--<div class="menu-select" title="Share this on wechat">
+              <a class="waves-effect waves-light btn" href="https://www.weixin.com/sharer/sharer.php?u={{ request.build_absolute_uri|urlencode }}">
+                  <i class="fa fa-weixin left"></i>Facebook</a>
+          </div>-->
+          
+          <div class="menu-select" title="Share this on facebook">
+              <a class="waves-effect waves-light btn" href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri|urlencode }}">
+                  <i class="fa fa-facebook-official left"></i>Facebook</a>
+
+          </div>
+
+          <div class="menu-select" title="Share this on linked in">
+              <a class="waves-effect waves-light btn" href="https://www.linkedin.com/cws/share?url={{ request.build_absolute_uri|urlencode }}">
+                  <i class="fa fa-linkedin-square left"></i>linked in</a>
+          </div>
+
+          <div class="menu-select" title="Share this on email">
+              <a class="waves-effect waves-light btn" href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site {{ request.build_absolute_uri|urlencode }}."
+   title="Share by Email">
+                  <i class="fa fa-share left"></i>email</a>
+
+          </div>
+
+          <div id="hide">
+              <i class="fa fa-times"></i>
+          </div>
+      </div>
+  </div>
+  <div id="show" class="btn-floating waves-effect waves-light btn-large brand-text">
+      <i class="fa fa-share-alt"></i>
+  </div>
+  <!-- end option panel -->
+
+  <!-- Preloader --> 
+    <div id="preloader">
+      <div class="loader">
+            <svg class="circle-loader" height="50" width="50">
+              <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10" />
+            </svg>
+        </div>    
+    </div><!--preloader end-->

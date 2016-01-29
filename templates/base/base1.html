@@ -1,0 +1,56 @@
+{% load pipeline %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    {% include 'base/metatags.html' %}
+  <!-- Favicon-->
+
+    <!-- It's pipeline's template tags. pipeline includes two templates tags: stylesheet and javascript -->
+    {% stylesheet 'style' %}
+    <link rel="stylesheet" href="/static/assets/font/font-awesome/css/font-awesome.css" type="text/css" />
+    <link rel="stylesheet" href="/static/assets/font/font-awesome/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="/static/assets/libs/materialize/css/materialize.min.css" type="text/css" />
+    <link rel="stylesheet" href="/static/assets/libs/materialize/css/materialize.css" type="text/css" />
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+  <!-- start option panel, share -->
+{% include 'base/switch.html' %}
+
+  <!-- Main Container -->
+  <main id="app" class="main-section">
+    <!-- header navigation start -->
+    {% include 'base/navigation.html' %}
+
+
+    <!-- #header  navigation end -->
+
+    <!-- Home Section start -->
+      {% block maincontent %}
+      {% endblock %}
+
+    <!-- #blog Section end -->
+
+      <!-- Footer Section end -->
+  {% include 'base/footer.html' %}
+
+    <!-- #footer end -->
+
+  </main>
+  <!-- Main Container end-->
+
+
+  <!-- JavaScripts -->
+  {% include 'base/js.html' %}
+</body>
+
+</html>

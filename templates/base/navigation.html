@@ -1,0 +1,58 @@
+{% load staticfiles %}
+{% include 'base/googleanalytics.html' %}
+<header id="navigation" class="root-sec white nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="nav-inner">
+              <nav class="primary-nav">
+                <div class="clearfix nav-wrapper">
+                  <a href="{% url 'home' %}" class="left brand-logo"><img src="/media/images/hyp_stamp.gif" alt="" style="height: 50px;width: 50px;margin-top: 15px;">
+                  </a>
+                  <a href="index.html#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                  <ul class="right static-menu"><!-- TODO -->
+                      {% include 'base/search.html' %}
+
+                    <li>
+                      <a class="dropdown-button blog-submenu-init" href="index.html#!" data-activates="dropdown1">
+                        <i class="mdi-navigation-more-vert right"></i>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="inline-menu side-nav" id="mobile-demo">
+
+                  <!-- Mini Profile // only visible in Tab and Mobile -->
+                    <li class="mobile-profile">
+                     <div class="profile-inner">
+                        <div class="pp-container">
+                            <img src="/media/images/hyp_profile.png" alt="">
+                        </div>
+                        <h3>He Yiping</h3>
+                        <h5>Software Developer</h5>
+                      </div>
+                    </li><!-- mini profile end-->
+
+
+                    <li><a href="{% url 'home' %}"><i class="fa fa-home fa-fw"></i>Home</a>
+                    </li>
+                    <li><a href="{% url 'blogs' %}"><i class="fa fa-pencil fa-fw"></i>Blogs</a>
+                    </li>
+                    <li><a href="{% url 'contact' %}"><i class="fa fa-phone fa-fw"></i>Contact</a>
+                    </li>
+                  </ul>
+                  <ul id="dropdown1" class="inline-menu submenu-ul dropdown-content">
+                    <li>Categories</li>
+                    {% for category in categories %}
+                    <li><a href="{{category.get_absolute_url}}" class="collection-item">{{category.name}}</a>
+                    </li>
+                      {% endfor %}
+                  </ul>
+
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- .container end -->
+    </header>

@@ -1,0 +1,50 @@
+{% load pipeline %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    {% include 'base/metatags.html' %}
+  <!-- Favicon-->
+
+    {% stylesheet 'style2' %}
+</head>
+
+<body>
+
+
+  <!-- start option panel -->
+{% include 'base/switch.html' %}
+
+  <!-- Main Container -->
+  <main id="app" class="main-section">
+    <!-- header navigation start -->
+    {% include 'base/navigation.html' %}
+
+
+    <!-- #header  navigation end -->
+
+    <!-- Home Section start -->
+      {% block maincontent %}
+      {% endblock %}
+
+    <!-- #blog Section end -->
+
+      <!-- Footer Section end -->
+  {% include 'base/footer.html' %}
+
+    <!-- #footer end -->
+
+  </main>
+  <!-- Main Container end-->
+
+
+  <!-- JavaScripts -->
+  {% include 'base/js.html' %}
+</body>
+
+</html>

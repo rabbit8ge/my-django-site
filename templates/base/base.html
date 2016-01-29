@@ -1,0 +1,53 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  {% include 'base/head.html' %}
+</head>
+
+<body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <!--<script src="https://apis.google.com/js/platform.js" async defer></script>-->
+	<!--<script src="{{ STATIC_URL }}assets/libs/apis.google.com/js/platform.js" async defer></script>-->
+ <!-- start option panel -->
+ {% include 'base/preloader.html' %}
+ <main id="app" class="main-section">
+     <header id="navigation" class="root-sec white nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="nav-inner">
+
+ {% include 'base/navigation.html' %}
+
+                </div>
+          </div>
+        </div>
+      </div>
+    </header> <!-- header navigation end -->
+
+ {% block content %}
+ {% endblock %}
+
+
+  {% include 'base/footer.html' %}
+
+ </main>
+ {% include 'base/js.html' %}
+</body>
+
+</html>

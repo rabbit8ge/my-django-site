@@ -1,0 +1,9 @@
+<div class="col-sm-4 single-card-box wow fadeInUpSmall" data-wow-delay=".2s" data-wow-duration=".7s">
+	<!-- TODO: Move the script to js.html -->
+	 <script src="{{ STATIC_URL }}assets/libs/echarts/echarts.js"></script>
+     <script src="{{ STATIC_URL }}assets/js/travelmap.js"></script>
+    <div>
+    	<div id="travelmap" style="width:900px;height:700px;left:center"></div>
+    </div>
+    <script>loadTravelMap(document.getElementById('travelmap'), {{travels|safe}})</script>
+</div> <!-- single education -->

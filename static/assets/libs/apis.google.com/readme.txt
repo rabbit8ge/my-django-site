@@ -1,0 +1,1 @@
+For some access problem to google.com, create this folder and download static files from google to here.

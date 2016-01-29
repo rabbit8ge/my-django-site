@@ -1,0 +1,54 @@
+{% extends 'base/base2.html' %}
+{% block maincontent %}
+
+ <section id="banner" class="root-sec brand-bg padd-tb-55 single-banner blogpage-banner-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="clearfix blog-banner-text blog-single-banner">
+            <div class="col-md-12">
+              <h2 class="title">{{ blog.title }}</h2>
+
+              <ul class="clearfix blog-post-meta">
+                <li>{{blog.date}}</li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> <!-- ./Banner end -->
+
+     <!-- Blog Post Container-->
+    <section id="all-posts" class="root-sec grey lighten-5 blogpage-posts-wrap">
+      <div class="container">
+        <div class="row">
+            <!-- Google add sense-->
+            <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+            <!--<ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-6195276590359835"
+             data-ad-slot="3897974502"
+             data-ad-format="auto"></ins>-->
+            <!--<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>-->
+        <!-- Google add sense-->
+            <br />
+          <div class="clearfix all-blog-post blog-inner with-sidebar">
+
+          <!-- post container start-->
+            <div class="col-sm-8">
+              <article class="single-post-page">
+
+                <div class="single-post-content">
+                    {{blog.body|safe|escape}}
+                </div>
+
+              </article>
+            </div> <!-- ./post container end-->
+
+            <!-- Sidebar start-->
+            {% include 'sidebar.html' %}
+          </div>
+        </div>
+      </div> <!-- ./container end-->
+    </section>  <!-- ./Blog Post Container end-
+{% endblock maincontent %}

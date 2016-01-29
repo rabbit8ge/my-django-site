@@ -175,7 +175,7 @@ WSGI_APPLICATION = 'myblog.wsgi.application'
  
 ACCESSKEY = 'ooy5ylmz3y'
 SECRETKEY = 'ml1j30mi5kk12m35ji14i2ljxx51l1ylh0x3lkjl'
-if False:#'SERVER_SOFTWARE' in os.environ:
+if True:#'SERVER_SOFTWARE' in os.environ:
     # see: http://www.sinacloud.com/doc/sae/python/faq.html#id6
     # For SAE configuration.
     print 'debug: server mode'
@@ -294,7 +294,7 @@ except ImportError:
 
 ALLOWED_HOSTS = ['*']
 
-DEBUG = True
+DEBUG = False
 
 # define this variable in order to write/read file in python.
 # you can use the command to import the variable.

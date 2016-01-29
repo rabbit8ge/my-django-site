@@ -294,7 +294,7 @@ except ImportError:
 
 ALLOWED_HOSTS = ['*']
 
-DEBUG = False
+DEBUG = True
 
 # define this variable in order to write/read file in python.
 # you can use the command to import the variable.
